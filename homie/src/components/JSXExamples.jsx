@@ -79,8 +79,7 @@ function JSXExamples() {
                 <h3>งานอดิเรกของ {user.firstName} คือ</h3>
                 <ul>
                     {user.interests.map((interest, index) => (
-                        <li key = {index}>
-                            {index + 1} . {interest}
+                        <li key = {index}> {interest}
                         </li>
                     ))}
                 </ul>
