@@ -84,6 +84,63 @@ function JSXExamples() {
                         </li>
                     ))}
                 </ul>
+                <div className = "product-list">
+                    <h3>รายการสินค้า</h3>
+                    {[
+                        { id: 1, name: 'เมล็ดกาเเฟเเม่จันใต้', price: 550, inStock: true },
+                        { id: 2, name: 'เครื่องชงกาเเฟ', price: 5500, inStock: true },
+                        { id: 3, name: 'กามอกา', price: 1250, inStock: false },
+                        { id: 4, name: 'เมล็ดกาเเฟเอธิโอเปีย', price: 950, inStock: false }
+                    ].map(product => (
+                        <div key = {product.id} className = "product-item">
+                            <span>{product.name}</span>
+                            <span> - ฿{product.price.toLocaleString()}</span>
+                            <span className = {product.inStock ? 'in-stock' : 'out-stock'}>
+                                {product.inStock ?  ' ✅ มีสินค้า' : ' ❌ สินค้าหมด'}
+                            </span>
+                        </div>
+                    ))}
+                </div>
+            </section>
+            <section>
+                <h2>🧩 React Fragment</h2>
+                <p>ใช้เมื่อไม่ต้องการ wrapper element:</p>
+                <React.Fragment>
+                    <h3>หัวข้อนี้</h3>
+                    <p>เนื้อหานี้</p>
+                </React.Fragment>
+                <>
+                    <h3>หัวข้ออื่น ๆ</h3>
+                    <p>เนื้อหาอื่น ๆ</p>
+                </>
+            </section>
+            <section>
+                <h2>🎯 Event Handling ใน JSX</h2>
+                <input 
+                    type = "text"
+                    placeholder = "พิมพ์มาค่ะ..."
+                    onChange = {(e) => console.log('พิมพ์', e.target.value, 'ไปเมื่อกี้')}
+                />
+                <select onChange={(e) => alert(`เลือกภาษา ${e.target.value}`)}>
+                    <option value="">-- เลือกภาษาที่คุณสนใจ --</option>
+                    <option value="cn-sp">จีน</option>
+                    <option value="ja">ญี่ปุ่น</option>
+                    <option value="kr">เกาหลี</option>
+                    <option value="de">เยอรมัน</option>
+                    <option value="es-es">สเปน</option>
+                    <option value="fr">ฝรั่งเศส</option>
+                    <option value="it">อิตาลี</option>
+                    <option value="pt-pt">โปรตุเกส</option>
+                </select>
+            </section>
+            <section>
+                <h2>💬 Comments ใน JSX</h2>
+                {/* นี่คือ comment ใน JSX */}
+                <p>Comment ใน JSX ต้องอยู่ใน &#123;curly braces&#125;</p>
+                {
+                    // นี่ก็เป็น comment เช่นกัน
+                    // แต่อยู่ใน JavaScript expression
+                }
             </section>
         </div>
     )
