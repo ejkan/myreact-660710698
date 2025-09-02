@@ -26,9 +26,9 @@ const TodoList = () => {
 
     // Render Area
     return (
-        <div style={{ maxWidth: '31.25rem', margin: '1.25rem auto', padding: '1.25rem' }}>
+        <div style={{ maxWidth: '30rem', margin: '1.25rem auto', padding: '1.25rem' }}>
             {/*Header*/}
-            <h3 style={{fontFamily: 'Krub', fontWeight: '700', color:'hsl(351, 78%, 71%)'}}>🤔 กานต์ต้องทำอะไรบ้าง ในเเต่ละอาทิตย์ 🤔</h3>
+            <h3 style={{fontFamily: 'Krub', fontWeight: '700', color:'hsl(351, 78%, 71%)'}}>🤔 วีกนี้กานต์ต้องทำอะไรบ้าง 🤔</h3>
             {/*Progress Bar - Outer Bar*/}
             <div style={{
                 backgroundColor: 'hsl(160, 40%, 60%)',
