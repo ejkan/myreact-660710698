@@ -1,26 +1,35 @@
 import React from 'react';
+import pfp from './images/pfp.webp';
+
+const cardfont = {
+    color: "#666",
+    margin: "10px",
+    fontFamily: "Krub",
+    fontWeight: "400",
+    fontSize: "1rem",
+};
 
 const Avatar = () => (
     <img 
-        src="https://via.placeholder.com/50" 
+        src={pfp}
         alt="Profile picture"
         style={{
             borderRadius: '50%',
-            width: '50px',
-            height: '50px',
-            border: '2px solid #667eea'
+            width: '80%',
+            height: '80%',
+            border: '.5em solid HSL(330, 70%, 70%)'
         }}
     />
 );
 
 const UserName = () => (
-    <h3 style={{ color: '#667eea', margin: '10px 0' }}>
+    <h3 style={{ color: '#667eea', margin: '10px', fontSize: '1.5rem' , fontFamily: 'Krub', fontWeight: '600' }}>
         จิรัญญา นวลละออง
     </h3>
 );
 
 const UserBio = () => (
-    <p style={{ color: '#666', fontSize: '14px' }}>
+    <p style={cardfont}>
         นักศึกษา สาขาเทคโนโลยีสารสนเทศ
     </p>
 );
@@ -40,9 +49,9 @@ const UserCard = () => {
             <Avatar />
             <UserName />
             <UserBio />
-            <p style={{ color: '#666', fontSize: '14px' }}>
+            <p style={cardfont}>
                 คณะวิทยาศาสตร์ มหาวิทยาลัยศิลปากร</p>
-            <a href={"https://ejkan.link"} target="_blank" rel="noopener noreferrer">👉🏼 อยากจ้างทางนี้นะคะ 👈🏼</a>
+            <a href={"https://ejkan.link"} target="_blank" rel="noopener noreferrer" style={cardfont}>👉🏼 อยากจ้างทางนี้นะคะ 👈🏼</a>
         </div>
     );
 };

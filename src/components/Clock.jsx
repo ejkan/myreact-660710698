@@ -1,5 +1,13 @@
 import React from 'react';
 
+const clockStyle = {
+    color: "#666",
+    margin: "10px",
+    fontFamily: "Krub",
+    fontWeight: "500",
+    fontSize: "1.5rem",
+}
+
 const Clock = () => {
     const now = new Date();
     const timeString = now.toLocaleTimeString('th-TH');
@@ -12,9 +20,9 @@ const Clock = () => {
     });
     return (
         <div className="clock">
-            <h3>⌚️ เวลาล่าสุด ⌚️</h3>
-            <p className="date">{dateString}</p>
-            <p className="time">{timeString} นาฬิกา</p>
+            <h3 style={{ color: '#667eea', margin: '10px', fontSize: '2rem' , fontFamily: 'Krub', fontWeight: '700' }}>⌚️ เวลาล่าสุด ⌚️</h3>
+            <p className="date" style={clockStyle}>{dateString}</p>
+            <p className="time" style={clockStyle}>{timeString} นาฬิกา</p>
         </div>
     );
 };

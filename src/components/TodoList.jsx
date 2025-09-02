@@ -1,5 +1,13 @@
 import React from 'react';
 
+const listStyle = {
+    color: "#666",
+    margin: "10px",
+    fontFamily: "Krub",
+    fontWeight: "500",
+    fontSize: "1rem",
+}
+
 const TodoList = () => {
     // Displayed Values
     const todos = [
@@ -19,7 +27,7 @@ const TodoList = () => {
     
     return (
         <div style={{ maxWidth: '500px', margin: '20px auto', padding: '20px' }}>
-            <h3>🤔 ฉันต้องทำอะไรบ้างในอาทิตย์นี้ 🤔</h3>
+            <h3 style={{fontFamily: 'Krub', fontWeight: '700'}}>🤔 ฉันต้องทำอะไรบ้างในเเต่ละอาทิตย์ 🤔</h3>
             
             {/* Progress Bar */}
             <div style={{
@@ -35,7 +43,8 @@ const TodoList = () => {
                     borderRadius: '17px',
                     padding: '8px 0',
                     color: 'white',
-                    fontWeight: 'bold',
+                    fontFamily: 'Krub',
+                    fontWeight: '700',
                     transition: 'width 0.3s ease'
                 }}>
                     {percentage}%
@@ -43,7 +52,7 @@ const TodoList = () => {
             </div>
             
             {/* Todo Items */}
-            <div style={{ margin: '20px 0' }}>
+            <div style={listStyle}>
                 {todos.map(todo => (
                     <div 
                         key={todo.id}
@@ -79,8 +88,10 @@ const TodoList = () => {
                 padding: '15px',
                 background: 'linear-gradient(45deg, #667eea, #764ba2)',
                 color: 'white',
-                borderRadius: '8px',
-                fontWeight: 'bold'
+                borderRadius: '5px',
+                fontSize: '1rem',
+                fontWeight: '700',
+                fontFamily: 'Krub',
             }}>
                 ✨ บรรลุเเล้ว {completedCount} จาก {totalCount} อย่าง ✨
             </div>
