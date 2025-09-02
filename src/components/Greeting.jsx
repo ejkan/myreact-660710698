@@ -1,14 +1,14 @@
 import React from 'react';
 
+// A greetingStyle constant for changing text properties.
 const greetingStyle = {
-    color: "hsl(351, 80%, 80%)",
-    margin: ".1rem 0",
-    padding: ".1rem 0",
+    color: "hsl(351, 78%, 71%)",
+    padding: ".25rem 0",
     fontFamily: "Krub",
     fontWeight: "400",
     fontSize: "1.25rem",
 }
-
+// A Greeting constant for displaying greeting class.
 const Greeting = () => {
     return (
         <div className="greeting" style={greetingStyle}>

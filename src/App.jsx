@@ -8,12 +8,12 @@ import Welcome from "./components/Welcome";
 
 function App() {
   return (
-    <div className="App" style={{backgroundColor:'#FAE8E0'}}>
+    <div className="App">
         <Welcome/>
-        <Clock/>
-        <UserCard/>
         <Greeting/>
+        <UserCard/>
         <TodoList/>
+        <Clock/>
     </div>
   );
 }

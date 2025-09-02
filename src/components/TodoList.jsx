@@ -1,8 +1,7 @@
 import React from 'react';
 
 const listStyle = {
-    color: "#666",
-    margin: "10px",
+    margin: ".625rem",
     fontFamily: "Krub",
     fontWeight: "500",
     fontSize: "1rem",
@@ -11,64 +10,64 @@ const listStyle = {
 const TodoList = () => {
     // Displayed Values
     const todos = [
-        { id: 1, text: 'ทบทวนของสัปดาห์ก่อน 📝', completed: false },
-        { id: 2, text: 'เรียน BIS 👩🏼‍💼', completed: true },
-        { id: 3, text: 'ลองเล่น Go ใน Server-Side 🖥️', completed: true },
-        { id: 4, text: 'ละเลง Client-Side 📱เเละทำ AI 🤖', completed: true },
-        { id: 5, text: 'วิเคราห์ระบบ เเละเป็นผู้จัดการฐานข้อมูล 👩🏼‍💻', completed: true },
-        { id: 6, text: 'พัฒนาเเอป Flutter 💻', completed: false },
-        { id: 7, text: 'เเล้วเเต่ใจจะไขว่คว้า 😌', completed: false }
+        { id: 1, text: 'วันทบทวนของสัปดาห์ก่อน 📝', completed: false },
+        { id: 2, text: 'ชั่วโมงวางเเผนทำธุรกิจ 👩🏼‍💼', completed: true },
+        { id: 3, text: 'ชั่วโมงลองเล่น Go ใน Server-Side 🖥️', completed: true },
+        { id: 4, text: 'ชั่วโมงละเลง Client-Side 📱เเละทำ AI 🤖', completed: true },
+        { id: 5, text: 'ชั่วโมงวิเคราห์ระบบ เเละเป็นผู้จัดการฐานข้อมูล 👩🏼‍💻', completed: true },
+        { id: 6, text: 'วันพัฒนาเเอป Flutter 💻', completed: false },
+        { id: 7, text: 'วันว่าง ที่อาจจะไม่ว่าง 😌', completed: false }
     ];
     
     // Statistics Calculation
     const completedCount = todos.filter(todo => todo.completed).length;
     const totalCount = todos.length;
     const percentage = Math.round((completedCount / totalCount) * 100);
-    
+
+    // Render Area
     return (
-        <div style={{ maxWidth: '500px', margin: '20px auto', padding: '20px' }}>
-            <h3 style={{fontFamily: 'Krub', fontWeight: '700', color:'#EF7C8E'}}>🤔 ฉันต้องทำอะไรบ้างในเเต่ละอาทิตย์ 🤔</h3>
-            
+        <div style={{ maxWidth: '31.25rem', margin: '1.25rem auto', padding: '1.25rem' }}>
+            {/*Header*/}
+            <h3 style={{fontFamily: 'Krub', fontWeight: '700', color:'hsl(351, 78%, 71%)'}}>🤔 กานต์ต้องทำอะไรบ้าง ในเเต่ละอาทิตย์ 🤔</h3>
             {/*Progress Bar - Outer Bar*/}
             <div style={{
                 backgroundColor: 'hsl(160, 40%, 60%)',
-                borderRadius: '20px',
-                padding: '3px',
-                margin: '15px 0'
+                borderRadius: '1.25rem',
+                padding: '.25rem',
+                margin: '1rem 0'
             }}>
                 {/*Progress Bar - Inner Bar*/}
                 <div style={{
                     backgroundColor: 'hsl(160, 50%, 70%)',
                     width: `${percentage}%`,
                     textAlign: 'center',
-                    borderRadius: '17px',
-                    padding: '8px 0',
+                    borderRadius: '1rem',
+                    padding: '.5rem',
                     color: 'hsl(18, 72%, 93%)',
                     fontFamily: 'Krub',
                     fontWeight: '700',
                     transition: 'width 0.3s ease'
                 }}>
-                    {percentage}%
+                    ทำไปเเล้ว {percentage}%
                 </div>
             </div>
             
-            {/* Todo Items */}
+            {/*Todolist*/}
             <div style={listStyle}>
                 {todos.map(todo => (
                     <div 
                         key={todo.id}
                         style={{
-                            padding: '12px',
-                            margin: '8px 0',
-                            borderRadius: '8px',
-                            border: '1px solid #ddd',
+                            padding: '.75rem',
+                            margin: '.5rem 0',
+                            borderRadius: '.5rem',
                             display: 'flex',
                             alignItems: 'center',
                             backgroundColor: todo.completed ? 'hsl(160, 40%, 60%)' : 'hsl(160, 50%, 70%)',
                             transition: 'all 0.3s ease'
                         }}
                     >
-                        <span style={{ marginRight: '12px', fontSize: '18px' }}>
+                        <span style={{ marginRight: '.75rem', fontSize: '1.25rem' }}>
                             {todo.completed ? '✅' : '⬜'}
                         </span>
                         <span style={{
@@ -84,12 +83,12 @@ const TodoList = () => {
             
             {/* Summary */}
             <div style={{
-                marginTop: '20px',
+                marginTop: '1.25rem',
                 textAlign: 'center',
-                padding: '15px',
-                background: 'linear-gradient(45deg, hsl(160, 40%, 50%), hsl(160, 40%, 60%))',
+                padding: '1rem',
+                background: 'linear-gradient(45deg, hsl(160, 40%, 50%), hsl(340, 40%, 50%))',
                 color: 'hsl(18, 72%, 93%)',
-                borderRadius: '5px',
+                borderRadius: '.5rem',
                 fontSize: '1rem',
                 fontWeight: '700',
                 fontFamily: 'Krub',
