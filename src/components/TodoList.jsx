@@ -27,22 +27,23 @@ const TodoList = () => {
     
     return (
         <div style={{ maxWidth: '500px', margin: '20px auto', padding: '20px' }}>
-            <h3 style={{fontFamily: 'Krub', fontWeight: '700'}}>🤔 ฉันต้องทำอะไรบ้างในเเต่ละอาทิตย์ 🤔</h3>
+            <h3 style={{fontFamily: 'Krub', fontWeight: '700', color:'#EF7C8E'}}>🤔 ฉันต้องทำอะไรบ้างในเเต่ละอาทิตย์ 🤔</h3>
             
-            {/* Progress Bar */}
+            {/*Progress Bar - Outer Bar*/}
             <div style={{
-                backgroundColor: '#f0f0f0',
+                backgroundColor: 'hsl(160, 40%, 60%)',
                 borderRadius: '20px',
                 padding: '3px',
                 margin: '15px 0'
             }}>
+                {/*Progress Bar - Inner Bar*/}
                 <div style={{
-                    backgroundColor: '#4caf50',
+                    backgroundColor: 'hsl(160, 50%, 70%)',
                     width: `${percentage}%`,
                     textAlign: 'center',
                     borderRadius: '17px',
                     padding: '8px 0',
-                    color: 'white',
+                    color: 'hsl(18, 72%, 93%)',
                     fontFamily: 'Krub',
                     fontWeight: '700',
                     transition: 'width 0.3s ease'
@@ -63,7 +64,7 @@ const TodoList = () => {
                             border: '1px solid #ddd',
                             display: 'flex',
                             alignItems: 'center',
-                            backgroundColor: todo.completed ? '#e8f5e8' : '#fff',
+                            backgroundColor: todo.completed ? 'hsl(160, 40%, 60%)' : 'hsl(160, 50%, 70%)',
                             transition: 'all 0.3s ease'
                         }}
                     >
@@ -73,7 +74,7 @@ const TodoList = () => {
                         <span style={{
                             flex: 1,
                             textDecoration: todo.completed ? 'line-through' : 'none',
-                            color: todo.completed ? '#666' : '#333'
+                            color: todo.completed ? 'hsl(18, 72%, 83%)' : 'hsl(18, 72%, 93%)'
                         }}>
                             {todo.text}
                         </span>
@@ -86,14 +87,14 @@ const TodoList = () => {
                 marginTop: '20px',
                 textAlign: 'center',
                 padding: '15px',
-                background: 'linear-gradient(45deg, #667eea, #764ba2)',
-                color: 'white',
+                background: 'linear-gradient(45deg, hsl(160, 40%, 50%), hsl(160, 40%, 60%))',
+                color: 'hsl(18, 72%, 93%)',
                 borderRadius: '5px',
                 fontSize: '1rem',
                 fontWeight: '700',
                 fontFamily: 'Krub',
             }}>
-                ✨ บรรลุเเล้ว {completedCount} จาก {totalCount} อย่าง ✨
+                ✨ บรรลุเเล้ว {completedCount} อย่าง จาก {totalCount} อย่าง ✨
             </div>
         </div>
     );

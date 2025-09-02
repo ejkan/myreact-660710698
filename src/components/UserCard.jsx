@@ -2,7 +2,7 @@ import React from 'react';
 import pfp from './images/pfp.webp';
 
 const cardfont = {
-    color: "#666",
+    color: "#FAE8E0",
     margin: "10px",
     fontFamily: "Krub",
     fontWeight: "400",
@@ -23,7 +23,7 @@ const Avatar = () => (
 );
 
 const UserName = () => (
-    <h3 style={{ color: '#667eea', margin: '10px', fontSize: '1.5rem' , fontFamily: 'Krub', fontWeight: '600' }}>
+    <h3 style={{ color: '#B6E2D3', margin: '10px', fontSize: '1.5rem' , fontFamily: 'Krub', fontWeight: '600' }}>
         จิรัญญา นวลละออง
     </h3>
 );
@@ -42,7 +42,7 @@ const UserCard = () => {
             padding: '20px',
             borderRadius: '12px',
             textAlign: 'center',
-            backgroundColor: '#f9f9f9',
+            backgroundColor: 'hsl(351, 80%, 70%)',
             maxWidth: '300px',
             margin: '20px auto'
         }}>

@@ -8,7 +8,7 @@ import Welcome from "./components/Welcome";
 
 function App() {
   return (
-    <div className="App">
+    <div className="App" style={{backgroundColor:'#FAE8E0'}}>
         <Welcome/>
         <Clock/>
         <UserCard/>

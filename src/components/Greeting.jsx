@@ -1,7 +1,7 @@
 import React from 'react';
 
 const greetingStyle = {
-    color: "#666",
+    color: "hsl(351, 80%, 80%)",
     margin: ".1rem 0",
     padding: ".1rem 0",
     fontFamily: "Krub",
