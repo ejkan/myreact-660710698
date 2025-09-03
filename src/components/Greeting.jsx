@@ -1,19 +1,44 @@
-import React from 'react';
+import React, { useState, useEffect, useRef } from 'react';
+import './Animations.css';
 
-// A greetingStyle constant for changing text properties.
+
 const greetingStyle = {
     color: "hsl(351, 78%, 71%)",
-    padding: ".25rem 0",
+    padding: ".25rem",
     fontFamily: "Krub",
     fontWeight: "400",
-    fontSize: "1.25rem",
+    fontSize: "1rem",
 }
-// A Greeting constant for displaying greeting class.
+
 const Greeting = () => {
+    const [isInView, setIsInView] = useState(false);
+    const greetingRef = useRef(null);
+
+    useEffect(() => {
+        const observer = new IntersectionObserver(
+            ([entry]) => {
+                if (entry.isIntersecting) {
+                    setIsInView(true);
+                    observer.disconnect();
+                }
+            },
+            { threshold: 0.3 }
+        );
+
+        if (greetingRef.current) {
+            observer.observe(greetingRef.current);
+        }
+
+        return () => {
+            if (greetingRef.current) {
+                observer.unobserve(greetingRef.current);
+            }
+        };
+    }, []);
     return (
-        <div className="greeting" style={greetingStyle}>
+        <div className={isInView ? 'zoom-in-fade-animate' : 'zoom-in-fade-initial'} style={greetingStyle} ref={greetingRef}>
             <h2>🙋🏼‍♀️ สวัสดีค่ะทุกคน  🙋🏼‍♀️</h2>
-            <p>👩🏼‍🎨 มาสร้างสิ่งที่น่าตะลึงด้วยกันนะคะ  👩🏼‍🎨</p>
+            <p style={{fontStyle: 'italic'}}>👩🏼‍🎨 มาสร้างสิ่งที่น่าตะลึงด้วยกันนะคะ  👩🏼‍🎨</p>
         </div>
     )
 }

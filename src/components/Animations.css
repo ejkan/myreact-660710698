@@ -1,0 +1,47 @@
+.fade-in-slide-up-initial {
+    opacity: 0;
+    transform: translateY(1rem); /* Start slightly below its final position */
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.fade-in-slide-up-animate {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.zoom-in-fade-initial {
+    opacity: 0;
+    transform: scale(0.90);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.zoom-in-fade-animate {
+    opacity: 1;
+    transform: scale(1);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+/* Specific delay for todolist items (It's optional, but nice for staggered effect) */
+.todo-item-delay-0 { transition-delay: 0s; }
+.todo-item-delay-1 { transition-delay: 0.05s; }
+.todo-item-delay-2 { transition-delay: 0.1s; }
+.todo-item-delay-3 { transition-delay: 0.15s; }
+.todo-item-delay-4 { transition-delay: 0.2s; }
+.todo-item-delay-5 { transition-delay: 0.25s; }
+.todo-item-delay-6 { transition-delay: 0.3s; }
+
+/* Progress Bar's inner bar animation */
+.progress-bar-inner-initial {
+    width: 0;
+}
+
+/* Keyframe animation for Summary colour pulse */
+@keyframes colourPulse {
+    0% { background: linear-gradient(45deg, hsl(160, 40%, 50%), hsl(340, 40%, 50%)); }
+    50% { background: linear-gradient(45deg, hsl(170, 45%, 55%), hsl(330, 45%, 55%)); }
+    100% { background: linear-gradient(45deg, hsl(160, 40%, 50%), hsl(340, 40%, 50%)); }
+}
+
+.summary-color-animate {
+    animation: colourPulse 3s ease-in-out infinite alternate; /* It loops indefinitely */
+}
