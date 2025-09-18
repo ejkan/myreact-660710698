@@ -1,0 +1,19 @@
+/* Main App Styles */
+.app {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.main-content {
+    flex: 1;
+    margin: 0;
+    width: 100%;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .main-content {
+        padding: 70px 15px 30px;
+    }
+}
