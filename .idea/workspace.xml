@@ -5,23 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="763dcc76-81df-47ff-ae5b-aeb9befdb7c4" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/bookstore-app/src/components/BookCard.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bookstore-app/src/components/BookImage.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bookstore-app/src/components/Navbar.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bookstore-app/src/components/NotFound.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bookstore-app/src/components/SearchBar.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bookstore-app/src/components/style/BookImage.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bookstore-app/src/components/style/Footer.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bookstore-app/src/components/style/Navbar.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bookstore-app/src/pages/BookListPage.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bookstore-app/src/pages/HomePage.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bookstore-app/src/pages/style/BookListPage.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bookstore-app/src/pages/style/HomePage.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_02_09_2025,_3_17 pm_[Changes]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_02_09_2025__3_17pm__Changes_.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/logo512.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Vue_logo.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bookstore-app/src/App.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/bookstore-app/src/App.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -108,7 +94,7 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-js-predefined-d6986cc7102b-b598e85cdad2-JavaScript-WS-252.25557.126" />
+        <option value="bundled-js-predefined-d6986cc7102b-9c94529fcfe0-JavaScript-WS-252.26199.162" />
       </set>
     </attachedChunks>
   </component>
@@ -135,7 +121,8 @@
       <workItem from="1757936133855" duration="1382000" />
       <workItem from="1758089570410" duration="428000" />
       <workItem from="1758126899040" duration="28000" />
-      <workItem from="1758165781970" duration="10866000" />
+      <workItem from="1758165781970" duration="12667000" />
+      <workItem from="1758770419160" duration="1536000" />
     </task>
     <servers />
   </component>

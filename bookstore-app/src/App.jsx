@@ -5,10 +5,10 @@ import './App.css';
 
 import HomePage from './pages/HomePage';
 import BookListPage from './pages/BookListPage';
-// import BookDetailPage from './pages/BookDetailPage';
-// import CategoryPage from './pages/CategoryPage';
-// import AboutPage from './pages/AboutPage';
-// import ContactPage from './pages/ContactPage';
+import BookDetailPage from './pages/BookDetailPage';
+import CategoryPage from './pages/CategoryPage';
+import AboutPage from './pages/AboutPage';
+import ContactPage from './pages/ContactPage';
 
 // Import Components
 import Navbar from './components/Navbar';
@@ -24,10 +24,10 @@ function App() {
                     <Routes>
                         <Route path="/" element={<HomePage />} />
                         <Route path="/books" element={<BookListPage />} />
-                        {/*<Route path="/book/:id" element={<BookDetailPage />} />*/}
-                        {/*<Route path="/category/:categoryId" element={<CategoryPage />} />*/}
-                        {/*<Route path="/about" element={<AboutPage />} />*/}
-                        {/*<Route path="/contact" element={<ContactPage />} />*/}
+                        <Route path="/book/:id" element={<BookDetailPage />} />
+                        <Route path="/category/:categoryId" element={<CategoryPage />} />
+                        <Route path="/about" element={<AboutPage />} />
+                        <Route path="/contact" element={<ContactPage />} />
                         <Route path="*" element={<NotFound />} />
                     </Routes>
                 </main>
